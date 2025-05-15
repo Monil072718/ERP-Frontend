@@ -29,10 +29,10 @@ const App = () => {
         <Sidebar />
         <Box
           component="main" width={'100%'}>
-            <AppBarComponent />
+            {/* <AppBarComponent /> */}
           {/* <Attendance /> */}     {/* perfect*/}  
-          <LeaveApplication />        {/* perfect*/}  
-          {/* <UploadResult /> */}
+          {/* <LeaveApplication />*/}      {/* perfect*/} 
+          {/* <UploadResult /> */}              {/* perfect*/} 
           {/* <TimeTable /> */}
           {/* <StudentSearch /> */}
           {/* <StudentDetailsModel open={true} /> */}
