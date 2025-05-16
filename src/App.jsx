@@ -29,6 +29,7 @@ import StudentAttendanceTracker from './Teachers/StudentAttendanceTracker';
 import HomeworkManager from './Teachers/HomeworkManager';
 import HomeworkCreationForm from './Teachers/HomeworkCreationForm';
 import SchoolDashboard from './Principle/SchoolDashboard';
+import StudentList from './Principle/StudentList';
 
 const App = () => {
   return (
@@ -69,7 +70,8 @@ const App = () => {
 
 
           {/* Principle */}
-          <SchoolDashboard/>
+          {/* <SchoolDashboard/> */}
+          <StudentList />
 
 
 
