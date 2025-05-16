@@ -8,8 +8,8 @@ import LeaveApplication from './Teachers/LeaveApplication';
 import UploadResult from './components/UploadResult';
 import NoticeCard from './common/EventList';
 import AppBarComponent from './components/AppBarComponent';
-import RemarkForm from './components/Remark';
-import MedicalIssueList from './components/LeaveHistory';
+import RemarkForm from './Teachers/Remark';
+import MedicalIssueList from './Teachers/LeaveHistory';
 import LeaveApplicationDetails from './components/LeaveDescription';
 import ViewAttendance from './components/ViewAttendance';
 import StudentSearch from './components/StudentSearch';
@@ -25,6 +25,7 @@ import EventsList from './common/EventList';
 import AttendanceMarking from './Teachers/AttendanceMarking';
 import ResultUpload from './components/UploadResult';
 import PaySlips from './Teachers/PaySlips';
+import ChatInterface from './Teachers/ChatInterface';
 
 const App = () => {
   return (
@@ -35,18 +36,18 @@ const App = () => {
           component="main" width={'100%'}>
             {/* <AppBarComponent /> */}
           {/* <Attendance />      */}
-          <LeaveApplication />      
+          {/* <LeaveApplication />       */}
           {/* <UploadResult />      remove from file        */}
           {/* <TimeTable /> */}
           {/* <StudentSearch /> */}
           {/* <StudentDetailsModel open={true} /> */}
           {/* <EventsList />
-          <RemarkForm />
-          <MedicalIssueList />
+          
+          
           <LeaveApplicationDetails />
           <ViewAttendance />
           <ScheduleEventForm />
-          <LeaveRequest /> */}
+           */}
           {/* <LeaveRequestDetailsModel open={true}  /> */}
           {/* <StudentResultsComponent />
           <FeesHistoryDetails /> */}
@@ -54,6 +55,10 @@ const App = () => {
           {/* <AttendanceMarking /> */}
           {/* <ResultUpload /> */}
           {/* <PaySlips /> */}
+          {/* <ChatInterface /> */}
+          {/* <RemarkForm /> */}
+          {/* <LeaveRequest /> */}
+          {/* <MedicalIssueList /> */}
 
         </Box>
       </Box>
