@@ -28,6 +28,7 @@ import ResultUpload from './Teachers/ResultUpload';
 import StudentAttendanceTracker from './Teachers/StudentAttendanceTracker';
 import HomeworkManager from './Teachers/HomeworkManager';
 import HomeworkCreationForm from './Teachers/HomeworkCreationForm';
+import SchoolDashboard from './Principle/SchoolDashboard';
 
 const App = () => {
   return (
@@ -64,7 +65,11 @@ const App = () => {
           {/* <LeaveApplication /> */}
           {/* <StudentAttendanceTracker /> */}
           {/* <HomeworkManager /> */}
-          <HomeworkCreationForm />
+          {/* <HomeworkCreationForm /> */}
+
+
+          {/* Principle */}
+          <SchoolDashboard/>
 
 
 
