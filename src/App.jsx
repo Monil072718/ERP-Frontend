@@ -2,11 +2,11 @@ import React from 'react'
 import Sidebar from './components/SideBar';
 import Login from './components/Login';
 import Attendance from './pages/Attendace';
-import TimeTable from './components/TimeTable';
+import TimeTable from './common/TimeTable';
 import { Box, Paper, Container, Grid, Card } from '@mui/material';
 import LeaveApplication from './components/LeaveApplication';
 import UploadResult from './components/UploadResult';
-import NoticeCard from './components/EventList';
+import NoticeCard from './common/EventList';
 import AppBarComponent from './components/AppBarComponent';
 import RemarkForm from './components/Remark';
 import MedicalIssueList from './components/LeaveHistory';
@@ -21,8 +21,9 @@ import StudentResultsComponent from './components/StudentResultsComponent';
 import FeesHistoryDetails from './components/FeesHistoryDetails';
 import Dashboard from './pages/Dashboard';
 import MarkAttendanceCard from './components/MarkAttendanceCard';
-import EventsList from './components/EventList';
+import EventsList from './common/EventList';
 import AttendanceMarking from './Teachers/AttendanceMarking';
+import ResultUpload from './components/UploadResult';
 
 const App = () => {
   return (
@@ -32,24 +33,25 @@ const App = () => {
         <Box
           component="main" width={'100%'}>
             {/* <AppBarComponent /> */}
-          {/* <Attendance /> */}     {/* perfect*/}  
-          {/* <LeaveApplication />*/}      {/* perfect*/} 
-          {/* <UploadResult /> */}              {/* perfect*/} 
+          {/* <Attendance />      */}
+          {/* <LeaveApplication />       */}
+          {/* <UploadResult />      remove from file        */}
           {/* <TimeTable /> */}
           {/* <StudentSearch /> */}
           {/* <StudentDetailsModel open={true} /> */}
-          {/* <EventsList /> */}
-          {/* <RemarkForm /> */}
-          {/* <MedicalIssueList /> */}
-          {/* <LeaveApplicationDetails /> */}
-          {/* <ViewAttendance /> */}
-          {/* <ScheduleEventForm /> */}
-          {/* <LeaveRequest /> */}
+          {/* <EventsList />
+          <RemarkForm />
+          <MedicalIssueList />
+          <LeaveApplicationDetails />
+          <ViewAttendance />
+          <ScheduleEventForm />
+          <LeaveRequest /> */}
           {/* <LeaveRequestDetailsModel open={true}  /> */}
-          {/* <StudentResultsComponent /> */}
-          {/* <FeesHistoryDetails /> */}
+          {/* <StudentResultsComponent />
+          <FeesHistoryDetails /> */}
           {/* <Dashboard /> */}
-          <AttendanceMarking />
+          {/* <AttendanceMarking /> */}
+          {/* <ResultUpload /> */}
 
         </Box>
       </Box>

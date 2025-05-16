@@ -17,7 +17,7 @@ import {
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import TimeTable from '../components/TimeTable';
+import TimeTable from '../common/TimeTable';
 import ProfileCard from '../components/ProfileCard';
 import TodaysAttendance from '../components/TodaysAttendance';
 import UpcomingEvents from '../components/UpcomingEvents';
