@@ -39,9 +39,9 @@ const App = () => {
           {/* <StudentDetailsModel open={true} /> */}
           {/* <EventsList /> */}
           {/* <RemarkForm /> */}
-          <MedicalIssueList />
+          {/* <MedicalIssueList /> */}
           {/* <LeaveApplicationDetails /> */}
-          {/* <ViewAttendance /> */}
+          <ViewAttendance />
           {/* <ScheduleEventForm /> */}
           {/* <LeaveRequest /> */}
           {/* <LeaveRequestDetailsModel open={true}  /> */}

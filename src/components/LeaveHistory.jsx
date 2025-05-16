@@ -1,4 +1,3 @@
-"use client"
 
 import { Box, Typography, IconButton, Divider, Paper, List, ListItem } from "@mui/material"
 import NotificationsIcon from "@mui/icons-material/Notifications"
