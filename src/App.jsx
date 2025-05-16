@@ -38,8 +38,8 @@ const App = () => {
           {/* <StudentSearch /> */}
           {/* <StudentDetailsModel open={true} /> */}
           {/* <EventsList /> */}
-          <RemarkForm />
-          {/* <MedicalIssueList /> */}
+          {/* <RemarkForm /> */}
+          <MedicalIssueList />
           {/* <LeaveApplicationDetails /> */}
           {/* <ViewAttendance /> */}
           {/* <ScheduleEventForm /> */}
