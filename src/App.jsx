@@ -5,12 +5,11 @@ import Attendance from './pages/Attendace';
 import TimeTable from './common/TimeTable';
 import { Box, Paper, Container, Grid, Card } from '@mui/material';
 import LeaveApplication from './Teachers/LeaveApplication';
-import UploadResult from './components/UploadResult';
 import NoticeCard from './common/EventList';
 import AppBarComponent from './components/AppBarComponent';
 import RemarkForm from './Teachers/Remark';
 import MedicalIssueList from './Teachers/LeaveHistory';
-import LeaveApplicationDetails from './components/LeaveDescription';
+import LeaveApplicationDetails from './Teachers/LeaveDescription';
 import ViewAttendance from './components/ViewAttendance';
 import StudentSearch from './components/StudentSearch';
 import StudentDetailsModel from './components/StudentDetailModel';
@@ -23,9 +22,10 @@ import Dashboard from './pages/Dashboard';
 import MarkAttendanceCard from './components/MarkAttendanceCard';
 import EventsList from './common/EventList';
 import AttendanceMarking from './Teachers/AttendanceMarking';
-import ResultUpload from './components/UploadResult';
 import PaySlips from './Teachers/PaySlips';
 import ChatInterface from './Teachers/ChatInterface';
+import ResultUpload from './Teachers/ResultUpload';
+import StudentAttendanceTracker from './Teachers/StudentAttendanceTracker';
 
 const App = () => {
   return (
@@ -34,31 +34,35 @@ const App = () => {
         <Sidebar />
         <Box
           component="main" width={'100%'}>
-            {/* <AppBarComponent /> */}
-          {/* <Attendance />      */}
-          {/* <LeaveApplication />       */}
-          {/* <UploadResult />      remove from file        */}
-          {/* <TimeTable /> */}
+          {/* <AppBarComponent /> */}
+          {/* <Attendance />      */}   
           {/* <StudentSearch /> */}
           {/* <StudentDetailsModel open={true} /> */}
-          {/* <EventsList />
-          
-          
-          <LeaveApplicationDetails />
-          <ViewAttendance />
-          <ScheduleEventForm />
-           */}
+          {/* <ViewAttendance />
+          <ScheduleEventForm />*/}
           {/* <LeaveRequestDetailsModel open={true}  /> */}
           {/* <StudentResultsComponent />
           <FeesHistoryDetails /> */}
           {/* <Dashboard /> */}
-          {/* <AttendanceMarking /> */}
-          {/* <ResultUpload /> */}
-          {/* <PaySlips /> */}
-          {/* <ChatInterface /> */}
-          {/* <RemarkForm /> */}
           {/* <LeaveRequest /> */}
+
+          {/* Common */}
+          {/* <EventsList /> */}
+          {/* <TimeTable /> */}
+
+
+          {/* Teacher */}
+          {/* <AttendanceMarking /> */}
+          {/* <ChatInterface /> */}
           {/* <MedicalIssueList /> */}
+          {/* <LeaveApplicationDetails /> */}
+          {/* <PaySlips /> */}
+          {/* <RemarkForm /> */}
+          {/* <ResultUpload /> */}
+          {/* <LeaveApplication /> */}
+          <StudentAttendanceTracker />
+
+
 
         </Box>
       </Box>
