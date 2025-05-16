@@ -43,10 +43,10 @@ const App = () => {
           {/* <LeaveApplicationDetails /> */}
           {/* <ViewAttendance /> */}
           {/* <ScheduleEventForm /> */}
-          <LeaveRequest />
+          {/* <LeaveRequest /> */}
           {/* <LeaveRequestDetailsModel open={true}  /> */}
           {/* <StudentResultsComponent /> */}
-          {/* <FeesHistoryDetails /> */}
+          <FeesHistoryDetails />
           {/* <Dashboard /> */}
         </Box>
       </Box>

@@ -1,211 +1,184 @@
-import React from 'react';
-import { 
-  Box,
-  Card,
-  CardContent,
-  Typography,
-  Grid,
-  Divider,
-  Container,
-  Paper
-} from '@mui/material';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import CancelIcon from '@mui/icons-material/Cancel';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+"use client"
 
-const theme = createTheme({
-  palette: {
-    success: {
-      light: '#e8f5e9',
-      main: '#4caf50',
-    },
-    error: {
-      light: '#ffebee',
-      main: '#f44336',
-    },
-  },
-});
+import { Box, Typography, IconButton, Divider, Paper } from "@mui/material"
+import NotificationsIcon from "@mui/icons-material/Notifications"
+import CheckCircleIcon from "@mui/icons-material/CheckCircle"
+import CancelIcon from "@mui/icons-material/Cancel"
+import AccessTimeIcon from "@mui/icons-material/AccessTime"
 
-const FeesHistoryDetails = () => {
-  const studentInfo = {
+const FeesTracker = () => {
+  // Mock data for student
+  const student = {
     name: "Arpit Jha",
-    className: "10(a)",
-    enrollmentNo: "1244"
-  };
+    class: "10(a)",
+    enrollmentNo: "1244",
+  }
 
+  // Mock data for fee records
   const feeRecords = [
     {
+      id: 1,
       month: "January",
       status: "Paid",
-      isComplete: true,
-      academicFee: 5000,
-      transport: 0,
-      lateFee: 0,
-      dueDate: "Mar 14",
-      isPaid: true
+      academic: 5000,
+      transport: "-",
+      lateFine: 0,
+      date: "Mar 14",
+      isPaid: true,
     },
     {
+      id: 2,
       month: "February",
       status: "Overdue",
-      isComplete: false,
-      academicFee: 5000,
-      transport: 0,
-      lateFee: 0,
-      dueDate: "Mar 14",
-      isPaid: false
+      academic: 5000,
+      transport: "-",
+      lateFine: 0,
+      date: "Mar 14",
+      isPaid: false,
     },
     {
+      id: 3,
       month: "February",
       status: "Overdue",
-      isComplete: false,
-      academicFee: 5000,
-      transport: 0,
-      lateFee: 0,
-      dueDate: "Mar 14",
-      isPaid: false
+      academic: 5000,
+      transport: "-",
+      lateFine: 0,
+      date: "Mar 14",
+      isPaid: false,
     },
     {
+      id: 4,
       month: "February",
       status: "Overdue",
-      isComplete: false,
-      academicFee: 5000,
-      transport: 0,
-      lateFee: 0,
-      dueDate: "Mar 14",
-      isPaid: false
+      academic: 5000,
+      transport: "-",
+      lateFine: 0,
+      date: "Mar 14",
+      isPaid: false,
     },
     {
+      id: 5,
       month: "February",
       status: "Overdue",
-      isComplete: false,
-      academicFee: 5000,
-      transport: 0,
-      lateFee: 0,
-      dueDate: "Mar 14",
-      isPaid: false
+      academic: 5000,
+      transport: "-",
+      lateFine: 0,
+      date: "Mar 14",
+      isPaid: false,
     },
     {
+      id: 6,
       month: "February",
       status: "Overdue",
-      isComplete: false,
-      academicFee: 5000,
-      transport: 0,
-      lateFee: 0,
-      dueDate: "Mar 14",
-      isPaid: false
+      academic: 5000,
+      transport: "-",
+      lateFine: 0,
+      date: "Mar 14",
+      isPaid: false,
     },
     {
+      id: 7,
       month: "February",
       status: "Overdue",
-      isComplete: false,
-      academicFee: 5000,
-      transport: 0,
-      lateFee: 0,
-      dueDate: "Mar 14",
-      isPaid: false
-    }
-  ];
+      academic: 5000,
+      transport: "-",
+      lateFine: 0,
+      date: "Mar 14",
+      isPaid: false,
+    },
+  ]
 
   return (
-    <ThemeProvider theme={theme}>
-      <Container maxWidth="lg" sx={{ py: 2 }}>
-        {/* Header with student info */}
-        <Paper 
-          elevation={1} 
-          sx={{ 
-            p: 2, 
-            mb: 2, 
-            borderRadius: 2,
-            display: 'flex',
-            justifyContent: 'space-between'
+    <Box sx={{ width: "100%", mt: 2, px: 2 , p: 4}}>
+      <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
+        <Typography variant="h5" component="h1" fontWeight="regular">
+          Fees
+        </Typography>
+        <IconButton aria-label="notifications">
+          <NotificationsIcon />
+        </IconButton>
+      </Box>
+
+      <Divider sx={{ mb: 3 }} />
+
+      {/* Student Information */}
+      <Paper
+        elevation={0}
+        sx={{
+          p: 3,
+          mb: 2,
+          borderRadius: 4,
+          border: "1px solid #e0e0e0",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+          <Typography variant="h6">{student.name}</Typography>
+          <Typography variant="body2" color="text.secondary">
+            Class - {student.class}
+          </Typography>
+        </Box>
+
+        <Typography variant="body1">Enrollment no-{student.enrollmentNo}</Typography>
+      </Paper>
+
+      {/* Fee Records */}
+      {feeRecords.map((record) => (
+        <Paper
+          key={record.id}
+          elevation={0}
+          sx={{
+            p: 3,
+            mb: 2,
+            borderRadius: 4,
+            border: `1px solid ${record.isPaid ? "#4caf50" : "#f44336"}`,
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
           }}
         >
-          <Box>
-            <Typography variant="subtitle1" fontWeight="medium">
-              {studentInfo.name}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Class - {studentInfo.className}
-            </Typography>
+          {/* Left - Month and Status */}
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            {record.isPaid ? (
+              <CheckCircleIcon sx={{ color: "#4caf50", mr: 1 }} />
+            ) : (
+              <CancelIcon sx={{ color: "#f44336", mr: 1 }} />
+            )}
+            <Typography variant="body1">{record.month}</Typography>
           </Box>
-          <Box>
-            <Typography variant="body2" color="text.secondary">
-              Enrollment no-{studentInfo.enrollmentNo}
-            </Typography>
-          </Box>
-        </Paper>
 
-        {/* Fee records */}
-        {feeRecords.map((record, index) => (
-          <Paper
-            key={index}
-            elevation={1}
-            sx={{ 
-              p: 2, 
-              mb: 2, 
-              borderRadius: 2,
-              bgcolor: record.isPaid ? 'success.light' : 'error.light',
-              border: 1,
-              borderColor: record.isPaid ? 'success.main' : 'error.main',
-              borderWidth: '1px'
+          {/* Middle - Status */}
+          <Typography
+            variant="body1"
+            sx={{
+              color: record.isPaid ? "#4caf50" : "#f44336",
+              fontWeight: "medium",
             }}
           >
-            <Grid container alignItems="center" justifyContent="space-between">
-              {/* Status and Month */}
-              <Grid item>
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                  {record.isComplete ? (
-                    <CheckCircleIcon color="success" fontSize="small" />
-                  ) : (
-                    <CancelIcon color="error" fontSize="small" />
-                  )}
-                  <Typography variant="body1" fontWeight="medium">
-                    {record.month}
-                  </Typography>
-                </Box>
-              </Grid>
+            {record.status}
+          </Typography>
 
-              {/* Payment Status */}
-              <Grid item>
-                <Typography 
-                  variant="body1" 
-                  fontWeight="medium" 
-                  color={record.isPaid ? 'success.main' : 'error.main'}
-                >
-                  {record.status}
-                </Typography>
-              </Grid>
+          {/* Right - Fee Details and Date */}
+          <Box sx={{ display: "flex", alignItems: "center", gap: 4 }}>
+            <Box>
+              <Typography variant="body2">Academic : {record.academic}</Typography>
+              <Typography variant="body2">Transport : {record.transport}</Typography>
+              <Typography variant="body2">Late fine : {record.lateFine}</Typography>
+            </Box>
 
-              {/* Fee Details */}
-              <Grid item>
-                <Box sx={{ textAlign: 'center' }}>
-                  <Typography variant="body2">
-                    Academic: {record.academicFee}
-                  </Typography>
-                  <Typography variant="body2">
-                    Transport: {record.transport}
-                  </Typography>
-                  <Typography variant="body2">
-                    Late Fee: {record.lateFee}
-                  </Typography>
-                </Box>
-              </Grid>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              <AccessTimeIcon sx={{ fontSize: "1rem", mr: 0.5 }} />
+              <Typography variant="body2">
+                {record.isPaid ? "Paid on" : "Due on"} {record.date}
+              </Typography>
+            </Box>
+          </Box>
+        </Paper>
+      ))}
+    </Box>
+  )
+}
 
-              {/* Due Date */}
-              <Grid item>
-                <Typography 
-                  variant="body2" 
-                  color={record.isPaid ? 'success.main' : 'error.main'}
-                >
-                  {record.isPaid ? `Paid on ${record.dueDate}` : `Due on ${record.dueDate}`}
-                </Typography>
-              </Grid>
-            </Grid>
-          </Paper>
-        ))}
-      </Container>
-    </ThemeProvider>
-  );
-};
-
-export default FeesHistoryDetails;
+export default FeesTracker
