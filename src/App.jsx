@@ -13,7 +13,7 @@ import LeaveApplicationDetails from './Teachers/LeaveDescription';
 import ViewAttendance from './components/ViewAttendance';
 import StudentSearch from './components/StudentSearch';
 import StudentDetailsModel from './components/StudentDetailModel';
-import ScheduleEventForm from './components/ScheduleEventForm';
+import ScheduleEventForm from './Principle/ScheduleEventForm';
 import LeaveRequest from './Principle/LeaveRequest';
 import LeaveRequestDetailsModel from './components/LeaveRequestDetailsModel';
 import StudentResultsComponent from './components/StudentResultsComponent';
@@ -31,6 +31,7 @@ import HomeworkCreationForm from './Teachers/HomeworkCreationForm';
 import SchoolDashboard from './Principle/SchoolDashboard';
 import StudentList from './Principle/StudentList';
 import StudentAttendanceList from './Principle/StudentAttendanceList';
+import TeacherDirectory from './Principle/TeacherDirectory';
 
 const App = () => {
   return (
@@ -40,21 +41,19 @@ const App = () => {
         <Box
           component="main" width={'100%'}>
           {/* <AppBarComponent /> */}
-          {/* <Attendance />      */}   
+          {/* <Attendance />      */}
           {/* <StudentSearch /> */}
           {/* <StudentDetailsModel open={true} /> */}
           {/* <ViewAttendance />
-          <ScheduleEventForm />*/}
+         /}
           {/* <LeaveRequestDetailsModel open={true}  /> */}
           {/* <StudentResultsComponent />
           <FeesHistoryDetails /> */}
           {/* <Dashboard /> */}
-          <LeaveRequest />
 
           {/* Common */}
           {/* <EventsList /> */}
           {/* <TimeTable /> */}
-
 
           {/* Teacher */}
           {/* <AttendanceMarking /> */}
@@ -74,6 +73,9 @@ const App = () => {
           {/* <SchoolDashboard/> */}
           {/* <StudentList /> */}
           {/* <StudentAttendanceList /> */}
+          {/* <LeaveRequest /> */}
+          {/* <TeacherDirectory /> */}
+          <ScheduleEventForm />
 
 
 
