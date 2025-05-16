@@ -34,6 +34,9 @@ import StudentAttendanceList from './Principle/StudentAttendanceList';
 import TeacherDirectory from './Principle/TeacherDirectory';
 import ClassScheduleForm from './Principle/ClassScheduleForm';
 import MultipleClassScheduleForm from './Principle/MultipleClassScheduleForm';
+import FeeDashboard from './Finance/FeeDashboard';
+import FeeTransactionsTable from './Finance/FeeTransactionsTable';
+import StudentFeePaymentTable from './Finance/StudentFeePaymentTable';
 
 const App = () => {
   return (
@@ -85,6 +88,12 @@ const App = () => {
           {/* <StudentResultsComponent /> */}
           {/* <MultipleClassScheduleForm /> */}
 
+
+
+          {/* Finance */}
+          {/* <FeeDashboard /> */}
+          {/* <FeeTransactionsTable /> */}
+          <StudentFeePaymentTable />
 
 
 
