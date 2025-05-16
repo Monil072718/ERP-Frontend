@@ -53,7 +53,7 @@ const App = () => {
           {/* <Dashboard /> */}
           {/* <AttendanceMarking /> */}
           {/* <ResultUpload /> */}
-          <PaySlips />
+          {/* <PaySlips /> */}
 
         </Box>
       </Box>
