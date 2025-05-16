@@ -38,6 +38,8 @@ import FeeDashboard from './Finance/FeeDashboard';
 import FeeTransactionsTable from './Finance/FeeTransactionsTable';
 import StudentFeePaymentTable from './Finance/StudentFeePaymentTable';
 import FeeManagementTable from './Finance/FeeManagementTable';
+import FeeManagementTableWithAdd from './Finance/FeeManagementTableWithAdd';
+import StudentFeeTracker from './Finance/StudentFeeTracker';
 
 const App = () => {
   return (
@@ -95,7 +97,9 @@ const App = () => {
           {/* <FeeDashboard /> */}
           {/* <FeeTransactionsTable /> */}
           {/* <StudentFeePaymentTable /> */}
-          <FeeManagementTable />
+          {/* <FeeManagementTable /> */}
+          {/* <FeeManagementTableWithAdd /> */}
+          <StudentFeeTracker />
 
 
 
