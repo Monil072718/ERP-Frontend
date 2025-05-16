@@ -32,6 +32,7 @@ import SchoolDashboard from './Principle/SchoolDashboard';
 import StudentList from './Principle/StudentList';
 import StudentAttendanceList from './Principle/StudentAttendanceList';
 import TeacherDirectory from './Principle/TeacherDirectory';
+import ClassScheduleForm from './Principle/ClassScheduleForm';
 
 const App = () => {
   return (
@@ -75,7 +76,8 @@ const App = () => {
           {/* <StudentAttendanceList /> */}
           {/* <LeaveRequest /> */}
           {/* <TeacherDirectory /> */}
-          <ScheduleEventForm />
+          {/* <ScheduleEventForm /> */}
+          <ClassScheduleForm />
 
 
 
