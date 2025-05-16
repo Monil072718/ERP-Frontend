@@ -4,7 +4,7 @@ import Login from './components/Login';
 import Attendance from './pages/Attendace';
 import TimeTable from './common/TimeTable';
 import { Box, Paper, Container, Grid, Card } from '@mui/material';
-import LeaveApplication from './components/LeaveApplication';
+import LeaveApplication from './Teachers/LeaveApplication';
 import UploadResult from './components/UploadResult';
 import NoticeCard from './common/EventList';
 import AppBarComponent from './components/AppBarComponent';
@@ -24,6 +24,7 @@ import MarkAttendanceCard from './components/MarkAttendanceCard';
 import EventsList from './common/EventList';
 import AttendanceMarking from './Teachers/AttendanceMarking';
 import ResultUpload from './components/UploadResult';
+import PaySlips from './Teachers/PaySlips';
 
 const App = () => {
   return (
@@ -34,7 +35,7 @@ const App = () => {
           component="main" width={'100%'}>
             {/* <AppBarComponent /> */}
           {/* <Attendance />      */}
-          {/* <LeaveApplication />       */}
+          <LeaveApplication />      
           {/* <UploadResult />      remove from file        */}
           {/* <TimeTable /> */}
           {/* <StudentSearch /> */}
@@ -52,6 +53,7 @@ const App = () => {
           {/* <Dashboard /> */}
           {/* <AttendanceMarking /> */}
           {/* <ResultUpload /> */}
+          <PaySlips />
 
         </Box>
       </Box>
