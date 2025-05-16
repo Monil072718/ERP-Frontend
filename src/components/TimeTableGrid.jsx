@@ -54,7 +54,7 @@ const TimeTableGrid = () => {
       class: "9A",
       room: "203",
       type: "Lecture",
-      isHighlighted: true,
+      isHighlighted: false, // Changed from true to false
     },
     {
       subject: "",
@@ -113,12 +113,12 @@ const TimeTableGrid = () => {
               sx={{
                 p: 2,
                 textAlign: "center",
-                borderRight: index < timeSlots.length - 1 ? "1px solid #9e9e9e" : "none", // Darker border
-                borderBottom: selectedSlot === index ? "none" : "1px solid #9e9e9e", // Conditionally remove bottom border
+                borderRight: index < timeSlots.length - 1 ? "1px solid #9e9e9e" : "none",
+                borderBottom: selectedSlot === index ? "none" : "1px solid #9e9e9e",
                 fontWeight: 400,
                 fontSize: "0.95rem",
-                backgroundColor: index === 4 ? "#2196f3" : "transparent", // Highlight the 12:00-1:00 header
-                color: index === 4 ? "white" : "inherit",
+                backgroundColor: selectedSlot === index ? "#2196f3" : "transparent", // Changed to use selectedSlot instead of index === 4
+                color: selectedSlot === index ? "white" : "inherit",
               }}
             >
               {slot}
@@ -137,9 +137,17 @@ const TimeTableGrid = () => {
                 alignItems: "center",
                 justifyContent: "center",
                 minHeight: "180px",
-                backgroundColor: data.isHighlighted ? "#2196f3" : data.isLunch ? "#bbdefb" : "transparent",
-                color: data.isHighlighted ? "white" : "inherit",
+                backgroundColor:
+                  selectedSlot === index
+                    ? "#2196f3" // Blue background for selected cells
+                    : data.isHighlighted
+                      ? "#2196f3" // Keep the highlighted cell blue
+                      : data.isLunch
+                        ? "#bbdefb" // Keep lunch cell light blue
+                        : "transparent",
+                color: selectedSlot === index || data.isHighlighted ? "white" : "inherit",
                 cursor: "pointer",
+                transition: "background-color 0.2s ease",
               }}
               onClick={() => handleCellClick(index)}
             >
@@ -154,7 +162,7 @@ const TimeTableGrid = () => {
                     sx={{
                       fontWeight: 500,
                       mb: 0.5,
-                      color: data.isHighlighted ? "white" : "inherit",
+                      color: data.isHighlighted || (selectedSlot === index && !data.isLunch) ? "white" : "inherit",
                     }}
                   >
                     {data.subject}
@@ -163,7 +171,7 @@ const TimeTableGrid = () => {
                     variant="body2"
                     sx={{
                       mb: 0.5,
-                      color: data.isHighlighted ? "white" : "inherit",
+                      color: data.isHighlighted || (selectedSlot === index && !data.isLunch) ? "white" : "inherit",
                     }}
                   >
                     Class: {data.class}
@@ -172,7 +180,7 @@ const TimeTableGrid = () => {
                     variant="body2"
                     sx={{
                       mb: 1.5,
-                      color: data.isHighlighted ? "white" : "inherit",
+                      color: data.isHighlighted || (selectedSlot === index && !data.isLunch) ? "white" : "inherit",
                     }}
                   >
                     Room: {data.room}
@@ -180,8 +188,8 @@ const TimeTableGrid = () => {
                   <Box
                     component="button"
                     sx={{
-                      backgroundColor: data.isHighlighted ? "white" : "#2196f3",
-                      color: data.isHighlighted ? "#2196f3" : "white",
+                      backgroundColor: selectedSlot === index || data.isHighlighted ? "white" : "#2196f3",
+                      color: selectedSlot === index || data.isHighlighted ? "#2196f3" : "white",
                       border: "none",
                       borderRadius: "4px",
                       py: 1,
@@ -190,7 +198,8 @@ const TimeTableGrid = () => {
                       fontWeight: 400,
                       fontSize: "0.9rem",
                       "&:hover": {
-                        backgroundColor: data.isHighlighted ? "#f5f5f5" : "#1976d2",
+                        backgroundColor:
+                          data.isHighlighted || (selectedSlot === index && !data.isLunch) ? "#f5f5f5" : "#1976d2",
                       },
                     }}
                   >
