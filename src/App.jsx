@@ -6,7 +6,7 @@ import TimeTable from './components/TimeTable';
 import { Box, Paper, Container, Grid, Card } from '@mui/material';
 import LeaveApplication from './components/LeaveApplication';
 import UploadResult from './components/UploadResult';
-import NoticeCard from './components/NoticeCard';
+import NoticeCard from './components/EventList';
 import AppBarComponent from './components/AppBarComponent';
 import RemarkForm from './components/Remark';
 import MedicalIssueList from './components/LeaveHistory';
@@ -21,6 +21,7 @@ import StudentResultsComponent from './components/StudentResultsComponent';
 import FeesHistoryDetails from './components/FeesHistoryDetails';
 import Dashboard from './pages/Dashboard';
 import MarkAttendanceCard from './components/MarkAttendanceCard';
+import EventsList from './components/EventList';
 
 const App = () => {
   return (
@@ -36,8 +37,8 @@ const App = () => {
           {/* <TimeTable /> */}
           {/* <StudentSearch /> */}
           {/* <StudentDetailsModel open={true} /> */}
-          {/* <NoticeCard /> */}
-          {/* <RemarkForm /> */}
+          {/* <EventsList /> */}
+          <RemarkForm />
           {/* <MedicalIssueList /> */}
           {/* <LeaveApplicationDetails /> */}
           {/* <ViewAttendance /> */}

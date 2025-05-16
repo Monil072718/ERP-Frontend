@@ -1,121 +1,176 @@
-import React, { useState } from 'react';
-import {
-    Box,
-    TextField,
-    Button,
-    Typography,
-    Paper,
-    Grid,
-    Container,
-    InputLabel,
-    Select,
-    MenuItem,
-    FormControl
-} from '@mui/material';
+"use client"
 
-export default function RemarkForm() {
-    const [formData, setFormData] = useState({
-        name: '',
-        date: '',
-        class: '',
-        section: '',
-        description: ''
-    });
+import { useState } from "react"
+import { Box, Typography, TextField, Button, Container, IconButton, Divider } from "@mui/material"
+import NotificationsIcon from "@mui/icons-material/Notifications"
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prevData => ({
-            ...prevData,
-            [name]: value
-        }));
-    };
+const RemarkForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    date: "",
+    class: "",
+    section: "",
+    description: "",
+  })
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log('Form submitted:', formData);
-        // Add your form submission logic here
-    };
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }))
+  }
 
-    return (
-        <Container maxWidth="lg" className="py-8">
-            <Paper elevation={0} className="p-6">
-                <Box component="form" onSubmit={handleSubmit} noValidate>
-                    <Grid container spacing={3}>
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log("Form submitted:", formData)
+    // Here you would typically send the data to your backend
+    alert("Remark sent successfully!")
+    // Reset form
+    setFormData({
+      name: "",
+      date: "",
+      class: "",
+      section: "",
+      description: "",
+    })
+  }
 
-                        {/* Class and Section fields in second row */}
-                        <Grid size={4} >
-                            <FormControl fullWidth>
-                            <InputLabel id="demo-simple-select-label">Class</InputLabel>
-                            <Select
-                                labelId="demo-simple-select-label"
-                                id="demo-simple-select"
-                                value={formData.class}
-                                label="Class"
-                                onChange={handleChange}
-                            >
-                                <MenuItem value={10}>Ten</MenuItem>
-                                <MenuItem value={20}>Twenty</MenuItem>
-                                <MenuItem value={30}>Thirty</MenuItem>
-                            </Select>
-                            </FormControl>
-                        </Grid>
+  // Custom styling for input fields to match the design
+  const inputStyle = {
+    "& .MuiOutlinedInput-root": {
+      borderRadius: "10px",
+      "& fieldset": {
+        borderColor: "#ccc",
+        borderWidth: "1px",
+      },
+      "&:hover fieldset": {
+        borderColor: "#999",
+      },
+      "&.Mui-focused fieldset": {
+        borderColor: "#2196f3",
+        borderWidth: "1px",
+      },
+    },
+    "& .MuiInputBase-input": {
+      padding: "12px 14px",
+    },
+  }
 
-                        <Grid size={4} >
-                        <FormControl fullWidth>
-                            <InputLabel id="demo-simple-select-label">Section</InputLabel>
-                            <Select
-                                labelId="demo-simple-select-label"
-                                id="demo-simple-select"
-                                value={formData.section}
-                                label="Section"
-                                onChange={handleChange}
-                            >
-                                <MenuItem value={10}>Ten</MenuItem>
-                                <MenuItem value={20}>Twenty</MenuItem>
-                                <MenuItem value={30}>Thirty</MenuItem>
-                            </Select>
-                            </FormControl>
-                        </Grid>
+  return (
+    <Container maxWidth="lg" sx={{ mt: 4 }}>
+      <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
+        <Typography variant="h5" component="h1" fontWeight="regular">
+          Remark
+        </Typography>
+        <IconButton aria-label="notifications">
+          <NotificationsIcon />
+        </IconButton>
+      </Box>
 
-                        <Grid size={8}>
-                            <Typography variant="body1" className="mb-2">Name</Typography>
-                            <TextField
-                                fullWidth
-                                name="name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                variant="outlined"
-                                size="small"
-                            />
-                        </Grid>
+      <Divider sx={{ mb: 4 }} />
 
-                        {/* Description field */}
-                        <Grid size={8}>
-                            <Typography variant="body1" className="mb-2">Description</Typography>
-                            <TextField
-                                fullWidth
-                                name="description"
-                                value={formData.description}
-                                onChange={handleChange}
-                                variant="outlined"
-                                multiline
-                                rows={5}
-                            />
-                        </Grid>
+      <Box component="form" onSubmit={handleSubmit} sx={{ mt: 2, px: 2 }}>
+        <Box sx={{ display: "flex", flexDirection: { xs: "column", sm: "row" }, gap: 3, mb: 3 }}>
+          <Box sx={{ flex: 1 }}>
+            <Typography variant="body1" sx={{ mb: 1 }}>
+              Name
+            </Typography>
+            <TextField
+              fullWidth
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              variant="outlined"
+              sx={inputStyle}
+            />
+          </Box>
 
-                        {/* Submit button */}
-                        <Grid size={8}>
-                            <Button
-                                type="submit"
-                                variant="contained"
-                                className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2"
-                            >
-                                Submit
-                            </Button>
-                        </Grid>
-                    </Grid>
-                </Box>
-            </Paper>
-        </Container>
-    );
+          <Box sx={{ flex: 1 }}>
+            <Typography variant="body1" sx={{ mb: 1 }}>
+              Date
+            </Typography>
+            <TextField
+              fullWidth
+              name="date"
+              type="text" // Changed to text to match the design
+              value={formData.date}
+              onChange={handleChange}
+              variant="outlined"
+              placeholder="DD/MM/YYYY"
+              sx={inputStyle}
+            />
+          </Box>
+        </Box>
+
+        <Box sx={{ display: "flex", gap: 2, mb: 3 }}>
+          <Box sx={{ width: "140px" }}>
+            <Typography variant="body1" sx={{ mb: 1 }}>
+              Class
+            </Typography>
+            <TextField
+              fullWidth
+              name="class"
+              value={formData.class}
+              onChange={handleChange}
+              variant="outlined"
+              sx={inputStyle}
+            />
+          </Box>
+
+          <Box sx={{ width: "140px" }}>
+            <Typography variant="body1" sx={{ mb: 1 }}>
+              Sec
+            </Typography>
+            <TextField
+              fullWidth
+              name="section"
+              value={formData.section}
+              onChange={handleChange}
+              variant="outlined"
+              sx={inputStyle}
+            />
+          </Box>
+        </Box>
+
+        <Box sx={{ mb: 4 }}>
+          <Typography variant="body1" sx={{ mb: 1 }}>
+            Description
+          </Typography>
+          <TextField
+            fullWidth
+            multiline
+            rows={8}
+            name="description"
+            value={formData.description}
+            onChange={handleChange}
+            variant="outlined"
+            sx={inputStyle}
+          />
+        </Box>
+
+        <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
+          <Button
+            type="submit"
+            variant="contained"
+            sx={{
+              width: "220px",
+              borderRadius: "8px",
+              py: 1.5,
+              textTransform: "none",
+              fontSize: "1rem",
+              bgcolor: "#2196f3",
+              "&:hover": {
+                bgcolor: "#1976d2",
+              },
+            }}
+          >
+            Send remark
+          </Button>
+        </Box>
+      </Box>
+    </Container>
+  )
 }
+
+export default RemarkForm
