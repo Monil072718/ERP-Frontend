@@ -22,6 +22,7 @@ import FeesHistoryDetails from './components/FeesHistoryDetails';
 import Dashboard from './pages/Dashboard';
 import MarkAttendanceCard from './components/MarkAttendanceCard';
 import EventsList from './components/EventList';
+import AttendanceMarking from './Teachers/AttendanceMarking';
 
 const App = () => {
   return (
@@ -46,8 +47,10 @@ const App = () => {
           {/* <LeaveRequest /> */}
           {/* <LeaveRequestDetailsModel open={true}  /> */}
           {/* <StudentResultsComponent /> */}
-          <FeesHistoryDetails />
+          {/* <FeesHistoryDetails /> */}
           {/* <Dashboard /> */}
+          <AttendanceMarking />
+
         </Box>
       </Box>
       {/* <Login /> */}
