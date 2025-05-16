@@ -7,7 +7,7 @@ import { Box, Paper, Container, Grid, Card } from '@mui/material';
 import LeaveApplication from './Teachers/LeaveApplication';
 import NoticeCard from './common/EventList';
 import AppBarComponent from './components/AppBarComponent';
-import RemarkForm from './Teachers/Remark';
+import RemarkForm from './common/Remark';
 import MedicalIssueList from './Teachers/LeaveHistory';
 import LeaveApplicationDetails from './Teachers/LeaveDescription';
 import ViewAttendance from './components/ViewAttendance';
@@ -23,7 +23,7 @@ import MarkAttendanceCard from './components/MarkAttendanceCard';
 import EventsList from './common/EventList';
 import AttendanceMarking from './Teachers/AttendanceMarking';
 import PaySlips from './Teachers/PaySlips';
-import ChatInterface from './Teachers/ChatInterface';
+import ChatInterface from './common/ChatInterface';
 import ResultUpload from './Teachers/ResultUpload';
 import StudentAttendanceTracker from './Teachers/StudentAttendanceTracker';
 import HomeworkManager from './Teachers/HomeworkManager';
@@ -77,7 +77,9 @@ const App = () => {
           {/* <LeaveRequest /> */}
           {/* <TeacherDirectory /> */}
           {/* <ScheduleEventForm /> */}
-          <ClassScheduleForm />
+           {/* <RemarkForm /> */}
+           {/* <ChatInterface /> */}
+          {/* <ClassScheduleForm /> */}
 
 
 
