@@ -40,6 +40,8 @@ import StudentFeePaymentTable from './Finance/StudentFeePaymentTable';
 import FeeManagementTable from './Finance/FeeManagementTable';
 import FeeManagementTableWithAdd from './Finance/FeeManagementTableWithAdd';
 import StudentFeeTracker from './Finance/StudentFeeTracker';
+import StudentFeeStatus from './Finance/StudentFeeStatus';
+import FeeCategoryManager from './Finance/FeeCategoryManager';
 
 const App = () => {
   return (
@@ -99,7 +101,9 @@ const App = () => {
           {/* <StudentFeePaymentTable /> */}
           {/* <FeeManagementTable /> */}
           {/* <FeeManagementTableWithAdd /> */}
-          <StudentFeeTracker />
+          {/* <StudentFeeTracker /> */}
+          {/* <StudentFeeStatus /> */}
+          <FeeCategoryManager />
 
 
 
