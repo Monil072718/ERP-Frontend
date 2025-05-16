@@ -14,7 +14,7 @@ import ViewAttendance from './components/ViewAttendance';
 import StudentSearch from './components/StudentSearch';
 import StudentDetailsModel from './components/StudentDetailModel';
 import ScheduleEventForm from './components/ScheduleEventForm';
-import LeaveRequest from './components/LeaveRequest';
+import LeaveRequest from './Principle/LeaveRequest';
 import LeaveRequestDetailsModel from './components/LeaveRequestDetailsModel';
 import StudentResultsComponent from './components/StudentResultsComponent';
 import FeesHistoryDetails from './components/FeesHistoryDetails';
@@ -49,7 +49,7 @@ const App = () => {
           {/* <StudentResultsComponent />
           <FeesHistoryDetails /> */}
           {/* <Dashboard /> */}
-          {/* <LeaveRequest /> */}
+          <LeaveRequest />
 
           {/* Common */}
           {/* <EventsList /> */}

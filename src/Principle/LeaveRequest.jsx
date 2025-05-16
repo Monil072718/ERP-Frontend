@@ -97,7 +97,7 @@ const LeaveApproval = () => {
   }
 
   return (
-    <Box sx={{ width: "100%", mt: 4, px: 2 }}>
+    <Box sx={{ width: "100%", mt: 2, px: 2 , p : 4}}>
       <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
         <Typography variant="h5" component="h1" fontWeight="regular">
           Leave approval
