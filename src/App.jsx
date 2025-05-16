@@ -37,6 +37,7 @@ import MultipleClassScheduleForm from './Principle/MultipleClassScheduleForm';
 import FeeDashboard from './Finance/FeeDashboard';
 import FeeTransactionsTable from './Finance/FeeTransactionsTable';
 import StudentFeePaymentTable from './Finance/StudentFeePaymentTable';
+import FeeManagementTable from './Finance/FeeManagementTable';
 
 const App = () => {
   return (
@@ -93,7 +94,8 @@ const App = () => {
           {/* Finance */}
           {/* <FeeDashboard /> */}
           {/* <FeeTransactionsTable /> */}
-          <StudentFeePaymentTable />
+          {/* <StudentFeePaymentTable /> */}
+          <FeeManagementTable />
 
 
 
