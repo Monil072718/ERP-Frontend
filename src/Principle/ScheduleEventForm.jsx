@@ -37,14 +37,6 @@ const ScheduleEventForm = () => {
 
   return (
     <Box sx={{ width: "100%", mt: 1, px: 2 , p: 4}}>
-      <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
-        <Typography variant="h5" component="h1" fontWeight="regular">
-          Schedule event
-        </Typography>
-        <IconButton aria-label="notifications">
-          <NotificationsIcon />
-        </IconButton>
-      </Box>
 
       <Divider sx={{ mb: 4 }} />
 
