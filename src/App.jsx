@@ -42,6 +42,7 @@ import FeeManagementTableWithAdd from './Finance/FeeManagementTableWithAdd';
 import StudentFeeTracker from './Finance/StudentFeeTracker';
 import StudentFeeStatus from './Finance/StudentFeeStatus';
 import FeeCategoryManager from './Finance/FeeCategoryManager';
+import TimeTableGrid from './components/TimeTableGrid';
 
 const App = () => {
   return (
@@ -53,7 +54,7 @@ const App = () => {
           {/* <AppBarComponent /> */}
           {/*     */}
           {/* <StudentSearch /> */}
-          {/* 
+        <TimeTableGrid />
           {/* <Dashboard /> */}
           {/* <Attendance />   */}
           {/* Common */}
@@ -103,7 +104,7 @@ const App = () => {
           {/* <FeeManagementTableWithAdd /> */}
           {/* <StudentFeeTracker /> */}
           {/* <StudentFeeStatus /> */}
-          <FeeCategoryManager />
+          {/* <FeeCategoryManager /> */}
 
 
 
