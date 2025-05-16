@@ -12,10 +12,10 @@ import MedicalIssueList from './Teachers/LeaveHistory';
 import LeaveApplicationDetails from './Teachers/LeaveDescription';
 import ViewAttendance from './components/ViewAttendance';
 import StudentSearch from './components/StudentSearch';
-import StudentDetailsModel from './components/StudentDetailModel';
+import StudentDetailsModel from './Principle/StudentDetailModel';
 import ScheduleEventForm from './Principle/ScheduleEventForm';
 import LeaveRequest from './Principle/LeaveRequest';
-import LeaveRequestDetailsModel from './components/LeaveRequestDetailsModel';
+import LeaveRequestDetailsModel from './Principle/LeaveRequestDetailsModel';
 import StudentResultsComponent from './components/StudentResultsComponent';
 import FeesHistoryDetails from './components/FeesHistoryDetails';
 import Dashboard from './pages/Dashboard';
@@ -33,6 +33,7 @@ import StudentList from './Principle/StudentList';
 import StudentAttendanceList from './Principle/StudentAttendanceList';
 import TeacherDirectory from './Principle/TeacherDirectory';
 import ClassScheduleForm from './Principle/ClassScheduleForm';
+import MultipleClassScheduleForm from './Principle/MultipleClassScheduleForm';
 
 const App = () => {
   return (
@@ -42,19 +43,16 @@ const App = () => {
         <Box
           component="main" width={'100%'}>
           {/* <AppBarComponent /> */}
-          {/* <Attendance />      */}
+          {/*     */}
           {/* <StudentSearch /> */}
-          {/* <StudentDetailsModel open={true} /> */}
-          {/* <ViewAttendance />
-         /}
-          {/* <LeaveRequestDetailsModel open={true}  /> */}
-          {/* <StudentResultsComponent />
-          <FeesHistoryDetails /> */}
+          {/* 
           {/* <Dashboard /> */}
-
+          {/* <Attendance />   */}
           {/* Common */}
           {/* <EventsList /> */}
           {/* <TimeTable /> */}
+          {/* <ClassScheduleForm /> */}
+          {/* <ChatInterface /> */}
 
           {/* Teacher */}
           {/* <AttendanceMarking /> */}
@@ -77,9 +75,18 @@ const App = () => {
           {/* <LeaveRequest /> */}
           {/* <TeacherDirectory /> */}
           {/* <ScheduleEventForm /> */}
-           {/* <RemarkForm /> */}
-           {/* <ChatInterface /> */}
+          {/* <RemarkForm /> */}
+          {/* <ChatInterface /> */}
           {/* <ClassScheduleForm /> */}
+          {/* <FeesHistoryDetails />  */}
+          {/* <StudentDetailsModel open={true} /> */}
+          {/* <LeaveRequestDetailsModel open={true}  /> */}
+          {/* <ViewAttendance /> */}
+          {/* <StudentResultsComponent /> */}
+          {/* <MultipleClassScheduleForm /> */}
+
+
+
 
 
 
