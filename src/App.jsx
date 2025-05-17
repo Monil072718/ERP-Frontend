@@ -49,6 +49,7 @@ import PaySlipsTable from './co-ordinator/PaySlipsTable';
 import StudentRecordsView from './co-ordinator/StudentRecordsView';
 import StudentAttendanceTable from './co-ordinator/StudentAttendanceTable';
 import StudentAdmissionManager from './co-ordinator/StudentAdmissionManager';
+import CoordinateDashboard from './co-ordinator/CoordinateDashboard';
 
 const App = () => {
   return (
@@ -116,6 +117,7 @@ const App = () => {
           {/* <FeeCategoryManager /> */}
 
           {/* Co-ordinator */}
+          <CoordinateDashboard />
           {/* <WeeklyTimetable /> */}
           {/* <ScheduleForm /> */}
           {/* <LeaveApprovalTable /> */}
@@ -124,7 +126,7 @@ const App = () => {
           {/* <StudentList /> */}
           {/* <StudentRecordsView />   import date library */}
           {/* <StudentAttendanceTable /> */}
-          <StudentAdmissionManager />
+          {/* <StudentAdmissionManager /> */}
 
 
 
