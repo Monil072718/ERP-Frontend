@@ -44,6 +44,7 @@ import FeeCategoryManager from './Finance/FeeCategoryManager';
 import TimeTableGrid from './components/TimeTableGrid';
 import WeeklyTimetable from './co-ordinator/WeeklyTimetable';
 import ScheduleForm from './co-ordinator/ScheduleForm';
+import LeaveApprovalTable from './co-ordinator/LeaveApprovalTable';
 
 const App = () => {
   return (
@@ -111,7 +112,8 @@ const App = () => {
 
           {/* Co-ordinator */}
           {/* <WeeklyTimetable /> */}
-          <ScheduleForm />
+          {/* <ScheduleForm /> */}
+          <LeaveApprovalTable />
 
 
 

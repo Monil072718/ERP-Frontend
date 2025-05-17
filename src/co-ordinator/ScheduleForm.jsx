@@ -1,5 +1,3 @@
-"use client"
-
 import { useState } from "react"
 import { Box, Typography, TextField, Button, InputAdornment, IconButton } from "@mui/material"
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday"
