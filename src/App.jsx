@@ -53,6 +53,7 @@ import CoordinateDashboard from './co-ordinator/CoordinateDashboard';
 import StudentManagement from './admission/StudentManagement';
 import InterviewManagement from './admission/InterviewManagement';
 import TransferRequestManagement from './admission/TransferRequestManagement';
+import StudentRegistrationForm from './admission/StudentRegistrationForm';
 
 const App = () => {
   return (
@@ -140,7 +141,9 @@ const App = () => {
           {/* <InterviewManagement /> */}
           {/* <InterviewManagement /> */}
           {/* Model remaining */}
-          <TransferRequestManagement />
+          {/* <TransferRequestManagement /> */}
+          {/* <TransferRequestManagement /> */}
+          <StudentRegistrationForm />
 
 
 
