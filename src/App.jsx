@@ -46,6 +46,7 @@ import WeeklyTimetable from './co-ordinator/WeeklyTimetable';
 import ScheduleForm from './co-ordinator/ScheduleForm';
 import LeaveApprovalTable from './co-ordinator/LeaveApprovalTable';
 import PaySlipsTable from './co-ordinator/PaySlipsTable';
+import StudentRecordsView from './co-ordinator/StudentRecordsView';
 
 const App = () => {
   return (
@@ -67,6 +68,7 @@ const App = () => {
           {/* <TimeTable /> */}
           {/* <ClassScheduleForm /> */}
           {/* <ChatInterface /> */}
+          {/* <StudentList /> */}
 
           {/* Teacher */}
           {/* <AttendanceMarking /> */}
@@ -116,7 +118,9 @@ const App = () => {
           {/* <ScheduleForm /> */}
           {/* <LeaveApprovalTable /> */}
           {/* <EventsList /> */}
-          <PaySlipsTable />
+          {/* <PaySlipsTable /> */}
+          {/* <StudentList /> */}
+          <StudentRecordsView />
 
 
 
