@@ -117,7 +117,7 @@ const App = () => {
           {/* <FeeCategoryManager /> */}
 
           {/* Co-ordinator */}
-          <CoordinateDashboard />
+          {/* <CoordinateDashboard /> */}
           {/* <WeeklyTimetable /> */}
           {/* <ScheduleForm /> */}
           {/* <LeaveApprovalTable /> */}
@@ -127,6 +127,10 @@ const App = () => {
           {/* <StudentRecordsView />   import date library */}
           {/* <StudentAttendanceTable /> */}
           {/* <StudentAdmissionManager /> */}
+          {/* <FeesHistoryDetails />  */}
+          {/* <ViewAttendance /> */}
+          {/* Model bakki */}
+          {/* <StudentResultsComponent /> */}
 
 
 

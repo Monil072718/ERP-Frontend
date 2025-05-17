@@ -61,7 +61,7 @@ const StudentResultsComponent = () => {
   )
 
   return (
-    <Box sx={{ width: "100%", maxWidth: 1200, mx: "auto", my: 4 }}>
+    <Box sx={{ width: "100%", mx: "auto", my: 4 , p: 4 , mt : 2 }}>
       {/* Half Yearly Results */}
       <Box sx={{ mb: 3 }}>
         <Box
