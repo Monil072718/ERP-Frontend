@@ -43,6 +43,7 @@ import StudentFeeTracker from './Finance/StudentFeeTracker';
 import StudentFeeStatus from './Finance/StudentFeeStatus';
 import FeeCategoryManager from './Finance/FeeCategoryManager';
 import TimeTableGrid from './components/TimeTableGrid';
+import WeeklyTimetable from './co-ordinator/WeeklyTimetable';
 
 const App = () => {
   return (
@@ -54,7 +55,7 @@ const App = () => {
           {/* <AppBarComponent /> */}
           {/*     */}
           {/* <StudentSearch /> */}
-        <TimeTableGrid />
+        {/* <TimeTableGrid /> */}
           {/* <Dashboard /> */}
           {/* <Attendance />   */}
           {/* Common */}
@@ -105,6 +106,9 @@ const App = () => {
           {/* <StudentFeeTracker /> */}
           {/* <StudentFeeStatus /> */}
           {/* <FeeCategoryManager /> */}
+
+          {/* Co-ordinator */}
+          <WeeklyTimetable />
 
 
 
