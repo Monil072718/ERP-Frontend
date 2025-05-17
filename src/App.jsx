@@ -1,7 +1,6 @@
 import React from 'react'
 import Sidebar from './components/SideBar';
 import Login from './components/Login';
-import Attendance from './pages/Attendace';
 import TimeTable from './common/TimeTable';
 import { Box, Paper, Container, Grid, Card } from '@mui/material';
 import LeaveApplication from './Teachers/LeaveApplication';
@@ -57,7 +56,9 @@ const App = () => {
           {/* <StudentSearch /> */}
         {/* <TimeTableGrid /> */}
           {/* <Dashboard /> */}
-          {/* <Attendance />   */}
+
+
+
           {/* Common */}
           {/* <EventsList /> */}
           {/* <TimeTable /> */}
@@ -108,7 +109,7 @@ const App = () => {
           {/* <FeeCategoryManager /> */}
 
           {/* Co-ordinator */}
-          <WeeklyTimetable />
+          {/* <WeeklyTimetable /> */}
 
 
 
