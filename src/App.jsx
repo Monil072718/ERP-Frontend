@@ -45,6 +45,7 @@ import TimeTableGrid from './components/TimeTableGrid';
 import WeeklyTimetable from './co-ordinator/WeeklyTimetable';
 import ScheduleForm from './co-ordinator/ScheduleForm';
 import LeaveApprovalTable from './co-ordinator/LeaveApprovalTable';
+import PaySlipsTable from './co-ordinator/PaySlipsTable';
 
 const App = () => {
   return (
@@ -113,7 +114,9 @@ const App = () => {
           {/* Co-ordinator */}
           {/* <WeeklyTimetable /> */}
           {/* <ScheduleForm /> */}
-          <LeaveApprovalTable />
+          {/* <LeaveApprovalTable /> */}
+          {/* <EventsList /> */}
+          <PaySlipsTable />
 
 
 
