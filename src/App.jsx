@@ -51,6 +51,7 @@ import StudentAttendanceTable from './co-ordinator/StudentAttendanceTable';
 import StudentAdmissionManager from './co-ordinator/StudentAdmissionManager';
 import CoordinateDashboard from './co-ordinator/CoordinateDashboard';
 import StudentManagement from './admission/StudentManagement';
+import InterviewManagement from './admission/InterviewManagement';
 
 const App = () => {
   return (
@@ -134,7 +135,8 @@ const App = () => {
           {/* <StudentResultsComponent /> */}
 
           {/* Admission */}
-          <StudentManagement />
+          {/* <StudentManagement /> */}
+          <InterviewManagement />
 
 
 
