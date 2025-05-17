@@ -50,6 +50,7 @@ import StudentRecordsView from './co-ordinator/StudentRecordsView';
 import StudentAttendanceTable from './co-ordinator/StudentAttendanceTable';
 import StudentAdmissionManager from './co-ordinator/StudentAdmissionManager';
 import CoordinateDashboard from './co-ordinator/CoordinateDashboard';
+import StudentManagement from './admission/StudentManagement';
 
 const App = () => {
   return (
@@ -131,6 +132,9 @@ const App = () => {
           {/* <ViewAttendance /> */}
           {/* Model bakki */}
           {/* <StudentResultsComponent /> */}
+
+          {/* Admission */}
+          <StudentManagement />
 
 
 
