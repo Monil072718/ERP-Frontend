@@ -43,6 +43,7 @@ import StudentFeeStatus from './Finance/StudentFeeStatus';
 import FeeCategoryManager from './Finance/FeeCategoryManager';
 import TimeTableGrid from './components/TimeTableGrid';
 import WeeklyTimetable from './co-ordinator/WeeklyTimetable';
+import ScheduleForm from './co-ordinator/ScheduleForm';
 
 const App = () => {
   return (
@@ -110,6 +111,7 @@ const App = () => {
 
           {/* Co-ordinator */}
           {/* <WeeklyTimetable /> */}
+          <ScheduleForm />
 
 
 
