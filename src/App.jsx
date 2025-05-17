@@ -47,6 +47,7 @@ import ScheduleForm from './co-ordinator/ScheduleForm';
 import LeaveApprovalTable from './co-ordinator/LeaveApprovalTable';
 import PaySlipsTable from './co-ordinator/PaySlipsTable';
 import StudentRecordsView from './co-ordinator/StudentRecordsView';
+import StudentAttendanceTable from './co-ordinator/StudentAttendanceTable';
 
 const App = () => {
   return (
@@ -120,7 +121,9 @@ const App = () => {
           {/* <EventsList /> */}
           {/* <PaySlipsTable /> */}
           {/* <StudentList /> */}
-          <StudentRecordsView />
+          {/* <StudentRecordsView />   import date library */}
+          <StudentAttendanceTable />
+
 
 
 
