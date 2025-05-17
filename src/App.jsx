@@ -48,6 +48,7 @@ import LeaveApprovalTable from './co-ordinator/LeaveApprovalTable';
 import PaySlipsTable from './co-ordinator/PaySlipsTable';
 import StudentRecordsView from './co-ordinator/StudentRecordsView';
 import StudentAttendanceTable from './co-ordinator/StudentAttendanceTable';
+import StudentAdmissionManager from './co-ordinator/StudentAdmissionManager';
 
 const App = () => {
   return (
@@ -122,7 +123,8 @@ const App = () => {
           {/* <PaySlipsTable /> */}
           {/* <StudentList /> */}
           {/* <StudentRecordsView />   import date library */}
-          <StudentAttendanceTable />
+          {/* <StudentAttendanceTable /> */}
+          <StudentAdmissionManager />
 
 
 
