@@ -54,6 +54,8 @@ import StudentManagement from './admission/StudentManagement';
 import InterviewManagement from './admission/InterviewManagement';
 import TransferRequestManagement from './admission/TransferRequestManagement';
 import StudentRegistrationForm from './admission/StudentRegistrationForm';
+import EducationalERPLogin from './common/educational-erp-login';
+import ForgotPassword from './common/forgot-password';
 
 const App = () => {
   return (
@@ -76,6 +78,8 @@ const App = () => {
           {/* <ClassScheduleForm /> */}
           {/* <ChatInterface /> */}
           {/* <StudentList /> */}
+          {/* <EducationalERPLogin /> */}
+          <ForgotPassword />
 
           {/* Teacher */}
           {/* <AttendanceMarking /> */}
